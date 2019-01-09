@@ -1,0 +1,64 @@
+﻿@model Statos.Service.Stores.StoreViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+    
+}
+@section StoreSideBar
+{
+    @Html.ActionLink("store Content", "List", "Store")
+    @Html.ActionLink("Add to Content", "Add", "Store")
+}
+<head>
+    <script src="../../../../Scripts/jquery-1.6.4.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/jquery-ui-1.10.0.js" type="text/javascript"></script>
+    <link href="../../../../Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+</head>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(store => store.ProductName)
+        @Html.TextBoxFor(store => store.ProductName)
+    </div>
+    <div>
+        @Html.LabelFor(store => store.NumberOfProduct)
+        @Html.TextBoxFor(store => store.NumberOfProduct)
+    </div>
+    <div>
+        @Html.LabelFor(store => store.Price)
+        @Html.TextBoxFor(store => store.Price)
+    </div>
+    <div>
+        @Html.LabelFor(store => store.DateOfPurchase)
+        @Html.TextBoxFor(store => store.DateOfPurchase, new { @class = "datepicker" })
+    </div>
+    <div>
+        @Html.LabelFor(store => store.PurchaserName)
+        @Html.TextBoxFor(store => store.PurchaserName)
+    </div>
+    <div>
+        @Html.LabelFor(store => store.VendorName)
+        @Html.TextBoxFor(store => store.VendorName)
+    </div>
+    <div>
+        @Html.LabelFor(store => store.VendorCountry)
+        @Html.DropDownListFor(store => store.VendorCountry, (IEnumerable<SelectListItem>)ViewBag.country)
+    </div>
+    <div>
+        @Html.LabelFor(store => store.TotalPrice)
+        @Html.TextBoxFor(store => store.TotalPrice)
+    </div>
+  
+    <div>
+        <input type="submit" value="Edit" />
+    </div>
+}
+<script>
+    $('.datepicker').datepicker({
+        showOn: "both",
+        buttonImage: "../../../../Images/Design/Datapicker.png",
+        buttonImageOnly: "true"
+    });
+</script>
+
+

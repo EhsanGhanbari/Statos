@@ -1,0 +1,38 @@
+﻿@using Statos.Web.UI.Helpers
+@using Statos.Web.UI.ViewModels
+@model Statos.Service.Contacts.ContactViewModel
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_ContentLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Contact", "Home"))
+{
+    <fieldset>
+        <div>
+            @Html.LabelFor(contact => contact.Name)
+            @Html.TextBoxFor(contact => contact.Name)
+        </div>
+        <div>
+            @Html.LabelFor(contact => contact.Email)
+            @Html.TextBoxFor(contact => contact.Email)
+            @Html.ValidationMessageFor(contact => contact.Email)
+        </div>
+        <div>
+            @Html.LabelFor(contact => contact.Title)
+            @Html.TextBoxFor(contact => contact.Title)
+        </div>
+        <div>
+            @Html.Partial("_Captcha", new CaptchaViewModel())
+            @Html.Partial("_InvisibleCaptcha", new InvisibleCaptchaHelper())
+        </div>
+        <div>
+            @Html.LabelFor(contact => contact.Body)
+            @Html.TextBoxFor(contact => contact.Body)
+            @Html.ValidationMessageFor(contact => contact.Body)
+        </div>
+        <input type="submit" value="Send" />
+    </fieldset>
+}

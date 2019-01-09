@@ -1,0 +1,26 @@
+﻿@model Statos.Web.UI.ViewModels.SearchViewModel 
+
+@*@using (Html.BeginForm("List", "Search", FormMethod.Get))
+{
+        @Html.ValidationSummary(false)
+    <div>
+        @Html.LabelFor(model => model.ProductName)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Brand)
+        @Html.ValidationMessageFor(model => model.Brand)
+    </div>
+    <p>
+        <input type="submit" value="Search" />
+    </p>
+}*@
+
+
+
+  <form role="search" class="navbar-form navbar-left">
+                             <div class="form-group">
+                                <input type="text" placeholder="Search" class="form-control">
+                            </div>
+                            <button class="btn btn-default" type="submit">Submit</button>
+                        </form>
+

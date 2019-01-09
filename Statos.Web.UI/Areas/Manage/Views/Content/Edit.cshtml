@@ -1,0 +1,42 @@
+﻿@model Statos.Service.Contents.ContentViewModel 
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(content => content.AboutText);
+        @Html.EditorFor(content => content.AboutText);
+    </div>
+    <div>
+        @Html.LabelFor(content=>content.Address)
+        @Html.EditorFor(content=>content.Address)
+    </div>
+    <div>
+        @Html.LabelFor(content=>content.FaceBook)
+        @Html.EditorFor(content=>content.FaceBook)
+    </div>
+    <div>
+        @Html.LabelFor(content=>content.GooglePlus)
+        @Html.EditorFor(content=>content.GooglePlus)
+    </div>
+    <div>
+        @Html.LabelFor(content=>content.Mobile)
+        @Html.EditorFor(content=>content.Mobile)
+    </div>
+    <div>
+        @Html.LabelFor(content=>content.Phone)
+        @Html.EditorFor(content=>content.Phone)
+    </div>
+    <div>
+        @Html.LabelFor(content=>content.Twitter)
+        @Html.EditorFor(content=>content.Twitter)
+    </div>
+    
+    <div>
+        <input type="submit" value="Edit"/>
+    </div>
+}
+

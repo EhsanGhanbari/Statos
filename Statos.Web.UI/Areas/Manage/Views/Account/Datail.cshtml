@@ -1,0 +1,35 @@
+﻿@model Statos.Service.Accounts.AccountViewModel
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section AccountSideBar
+{
+    @Html.ActionLink("List of all Account", "List", "Account")
+    @Html.ActionLink("Creat New Account", "Create", "Account")
+}
+<div>
+
+    @Html.LabelFor(account => account.FirstName)
+    @Html.DisplayFor(account => account.FirstName)
+</div>
+<div>
+    @Html.LabelFor(account => account.LastName)
+    @Html.DisplayFor(account => account.LastName)
+</div>
+<div>
+    @Html.LabelFor(account => account.Email)
+    @Html.DisplayFor(account => account.Email)
+</div>
+<div>
+    @Html.LabelFor(account => account.UserName)
+    @Html.DisplayFor(account => account.UserName)
+</div>
+<div>
+    @Html.LabelFor(account => account.Sex)
+    @Html.DisplayFor(account => account.Sex)
+</div>
+<div>
+    @Html.LabelFor(account => account.Role)
+    @Html.DisplayFor(account => account.Role)
+</div>

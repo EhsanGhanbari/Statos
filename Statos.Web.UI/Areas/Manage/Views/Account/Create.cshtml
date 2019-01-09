@@ -1,0 +1,67 @@
+﻿@using Statos.Service.Accounts
+@model Statos.Service.Accounts.AccountViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section AccountSideBar
+{
+    @Html.ActionLink("List of all Account", "List", "Account")
+    @Html.ActionLink("Creat New Account", "Create", "Account")
+}
+
+<fieldset>
+    @using (Html.BeginForm("Create", "Account"))
+    {
+        <div>
+            @Html.LabelFor(register => register.FirstName)
+            @Html.TextBoxFor(register => register.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.LastName)
+            @Html.TextBoxFor(register => register.LastName)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.Email)
+            @Html.TextBoxFor(register => register.Email)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.UserName)
+            @Html.TextBoxFor(register => register.UserName)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.PhoneNumber)
+            @Html.TextBoxFor(register => register.PhoneNumber)
+        </div>
+         <div>
+            @Html.LabelFor(register => register.MobileNumber)
+            @Html.TextBoxFor(register => register.MobileNumber)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.Password)
+            @Html.PasswordFor(register => register.Password)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.ConfirmPassword)
+            @Html.PasswordFor(register => register.ConfirmPassword)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.SecurityEmail)
+            @Html.TextBoxFor(register => register.SecurityEmail)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.Sex)
+            @Html.DropDownListFor(register => register.SelectedValue, ((AccountViewModel)ViewBag.GenderList).SelectedItemForGender)
+        </div>
+        <div>
+            @Html.LabelFor(register => register.Role)
+            @Html.DropDownListFor(register => register.SelectedValue, ((AccountViewModel)ViewBag.RoleList).SelectedItemForRole)
+        </div>
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+        <div>
+            @Html.ValidationSummary()
+        </div>
+    }
+</fieldset>

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Statos.Service.Products.BrandViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        @Html.ActionLink(item.Name, "Products", "Brand", new { brandId = item.BrandId }, null)
+    </div>
+}
+

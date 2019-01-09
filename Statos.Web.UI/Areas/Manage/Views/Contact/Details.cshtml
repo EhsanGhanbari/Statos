@@ -1,0 +1,57 @@
+﻿@model Statos.Service.Contacts.ContactViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section ContactSideBar
+{
+    @Html.ActionLink("List of all Contact", "List", "Contact")
+}
+
+<div>
+    @Html.LabelFor(contact => contact.Name)
+    @Html.DisplayFor(contact => contact.Name)
+</div>
+<div>
+    @Html.LabelFor(contact => contact.Email)
+    @Html.DisplayFor(contact => contact.Email)
+</div>
+<div>
+    @Html.LabelFor(contact => contact.Title)
+    @Html.DisplayFor(contact => contact.Title)
+</div>
+<div>
+    @Html.LabelFor(contact => contact.Body)
+    @Html.DisplayFor(contact => contact.Body)
+</div>
+<div>
+    @Html.LabelFor(contact => contact.CreationTime)
+    @Html.DisplayFor(contact => contact.CreationTime)
+</div>
+@using (Html.BeginForm("Reply", "Contact", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(contact => contact.ReplyMessage)
+        @Html.TextAreaFor(contact => contact.ReplyMessage)
+    </div>
+    <div>
+        <input type="submit" value="Reply" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Delete", "Delete", "Contact", new { contactId = Model.ContactId }, new { @class = "delete" })
+</div>
+<script>
+    $(function () {
+        $(".delete").click(function (e) {
+            e.preventDefault();
+            var link = this.href;
+            $.ajax({
+                type: 'Post',
+                url: link,
+                success: function (data) { }
+            });
+        });
+    })
+</script>

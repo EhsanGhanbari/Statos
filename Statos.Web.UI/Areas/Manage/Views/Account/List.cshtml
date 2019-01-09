@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Statos.Service.Accounts.AccountViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section AccountSideBar
+{
+    @Html.ActionLink("List of all Account", "List", "Account")
+    @Html.ActionLink("Creat New Account", "Create", "Account")
+}
+<br />
+<br />
+<table cellpadding="0" cellspacing="0">
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>  @Html.ActionLink(item.UserName, "Datail", "Account", new { accountId = item.AccountId }, null)</td>
+            <td>@Html.DisplayFor(a => item.Role)</td>
+            <td class="action">
+                @Html.ActionLink("Edit", "Edit", "Account", new { accountId = item.AccountId }, null)
+                @Html.ActionLink("Reset Password", "ResetPassword", "Account", new { accountId = item.AccountId }, null)
+            </td>
+        </tr>
+    }
+</table>

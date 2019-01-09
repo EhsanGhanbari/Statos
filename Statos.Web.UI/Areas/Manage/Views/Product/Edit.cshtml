@@ -1,0 +1,46 @@
+﻿@model Statos.Service.Products.ProductViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+    
+}
+
+@section ProductSideBar
+{
+    @Html.ActionLink("List of all Products", "List", "Product")
+    @Html.ActionLink("Create Product", "Create", "Product")
+}
+
+@using (Html.BeginForm())
+{
+
+    <h3>Edit Product</h3>
+    <fieldset>
+        <p>
+            <label>@Html.LabelFor(product => product.Name)</label>
+            @Html.TextBoxFor(product => product.Name)
+        </p>
+        <p>
+            <label>@Html.LabelFor(product => product.Brand)</label>
+        @Html.DropDownList("brandId", (IEnumerable<SelectListItem>)ViewBag.Brands, "--Select Brand--")
+        @Html.ActionLink("Add Brand", "Create", "Brand")
+        <p>
+            <label>@Html.LabelFor(product => product.Category)</label>
+            @Html.DropDownList("categoryId", (IEnumerable<SelectListItem>)ViewBag.Categories, "--Select Category--")
+            @Html.ActionLink("Add Category", "Create", "Category")
+        </p>
+        <p>
+            <label>@Html.LabelFor(product => product.Price)</label>
+            @Html.TextBoxFor(product => product.Price)
+        </p>
+        <p>
+            <label>@Html.LabelFor(product => product.Picture)</label>
+        </p>
+        <p>
+            <label>@Html.LabelFor(product => product.Description)</label>
+            @Html.TextAreaFor(product => product.Description)
+        </p>
+        <p>
+            <input type="submit" value="Edit" />
+    </fieldset>
+}

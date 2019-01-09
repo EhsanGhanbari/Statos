@@ -1,0 +1,19 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using Statos.Web.UI.Helpers
+@Html.PagedListPager((IPagedList)ViewBag.Names, page => Url.Action("List", new SearchViewModelHelper 
+{ SearchResults = ViewBag.SearchParameters }))
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+@if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+{
+    foreach (var result in Model.SearchResults)
+    {
+        
+    }
+}
+

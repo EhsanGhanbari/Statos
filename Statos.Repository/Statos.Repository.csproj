@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E2E8878-B722-478C-980D-B73FA2CDD714}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Statos.Repository</RootNamespace>
+    <AssemblyName>Statos.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\AccountMapping.cs" />
+    <Compile Include="Accounts\AccountRepository.cs" />
+    <Compile Include="Accounts\RoleMapping.cs" />
+    <Compile Include="Accounts\UserRoleMapping.cs" />
+    <Compile Include="Blogs\BlogMapping.cs" />
+    <Compile Include="Blogs\BlogRepository.cs" />
+    <Compile Include="Products\BrandMapping.cs" />
+    <Compile Include="Languages\LanguageMapping.cs" />
+    <Compile Include="Languages\LanguageRepository.cs" />
+    <Compile Include="Members\MemberMapping.cs" />
+    <Compile Include="Members\MemberRepository.cs" />
+    <Compile Include="Products\CategoryMapping.cs" />
+    <Compile Include="Contacts\ContactMapping.cs" />
+    <Compile Include="Contacts\ContactRepository.cs" />
+    <Compile Include="Contents\ContentRepository.cs" />
+    <Compile Include="Contents\ContentMapping.cs" />
+    <Compile Include="Initializer.cs" />
+    <Compile Include="Products\ProductMapping.cs" />
+    <Compile Include="Stores\StoreMapping.cs" />
+    <Compile Include="Stores\StoreRepository.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="StatosContext.cs" />
+    <Compile Include="Products\ProductRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Statos.Model\Statos.Model.csproj">
+      <Project>{DDE3DBF6-955F-4648-B3B6-64FBA4F7601D}</Project>
+      <Name>Statos.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

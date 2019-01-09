@@ -1,0 +1,26 @@
+﻿@model Statos.Service.Accounts.LogOnViewModel
+@{
+    ViewBag.Title = "LogOn";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(logOn=>logOn.UserName)
+        @Html.TextBoxFor(logOn=>logOn.UserName)
+    </div>
+    <div>
+        @Html.LabelFor(logOn=>logOn.Password)
+        @Html.TextBoxFor(logOn=>logOn.Password)
+    </div>
+    <div>
+        @Html.LabelFor(logOn=>logOn.RememberMe)
+        @Html.CheckBoxFor(logOn=>logOn.RememberMe)
+    </div>
+    <div>
+        <input type="submit" value="LogIn"/>
+    </div>
+}
+
+
+

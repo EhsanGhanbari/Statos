@@ -1,0 +1,39 @@
+﻿@model Statos.Service.Blogs.BlogViewModel 
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section BlogSideBar
+    {
+    @Html.ActionLink("List of all Blogs", "List", "Blog")
+    @Html.ActionLink("Creat New Blog", "Create", "Blog")
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <div>
+            @Html.LabelFor(post => post.Title)
+            @Html.TextBoxFor(post => post.Title)
+        </div>
+       <div>
+            @Html.DisplayFor(post => post.Body)
+            @Html.TextAreaFor(post => post.Body)
+        </div>
+ 
+        <div>
+            <textarea class="ckeditor" id="editor1" rows="10">
+
+            </textarea>
+        </div>
+
+        <div>
+            @Html.ValidationSummary()
+        </div>
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </fieldset>
+}
+
+

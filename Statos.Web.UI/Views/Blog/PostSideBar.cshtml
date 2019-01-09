@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Statos.Service.Blogs.BlogViewModel>
+@foreach (var item in Model)
+{
+    <div>
+        @Html.ActionLink(item.ShortTitle + "...", "Post", "Blog", new { postId = item.PostId, urlSlug = item.UrlSlug }, null)
+    </div>
+}

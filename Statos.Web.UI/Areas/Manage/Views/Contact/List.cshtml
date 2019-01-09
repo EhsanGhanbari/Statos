@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Statos.Service.Contacts.ContactViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@section ContactSideBar
+{
+    @Html.ActionLink("List of all Contact", "List", "Contact")
+}
+
+<br />
+<table cellpadding="0" cellspacing="0">
+    @foreach (var item in Model)
+    {
+        @Html.HiddenFor(contact => item.ContactId)
+        <tr>
+            <td>@Html.ActionLink(item.ShortTitle + "...", "Details", "Contact", new { contactId = item.ContactId }, null)</td>
+            <td>@item.CreationTime.ToLongDateString()</td>
+            <td>@Html.ActionLink("Delete", "Delete", "Contact", new { contactId = item.ContactId }, new { @class = "delete" })</td>
+        </tr>
+    }
+</table>
+<br />
+<br />
+
+<script type="text/javascript">
+    $(function () {
+        $(".delete").click(function (e) {
+            e.preventDefault();
+            var link = this.href;
+            $.ajax({
+                type: 'Post',
+                url: link,
+                success: function (data) { }
+            });
+        });
+    })
+</script>
+

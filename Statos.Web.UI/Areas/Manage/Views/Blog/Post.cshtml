@@ -1,0 +1,20 @@
+﻿@model Statos.Service.Blogs.BlogViewModel
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@section BlogSideBar
+    {
+    @Html.ActionLink("List of all Blogs", "List", "Blog")
+    @Html.ActionLink("Creat New Blog", "Create", "Blog")
+}
+
+<div>
+    @Html.LabelFor(post => post.Title)
+    @Html.DisplayTextFor(post => post.Title)
+</div>
+<div>
+    @Html.LabelFor(post => post.Body)
+    @Html.DisplayTextFor(post => post.Body)
+</div>

@@ -1,0 +1,24 @@
+﻿@model Statos.Service.Members.MemberViewModel
+@using (Html.BeginForm("Member","Home"))
+{
+    <div class="field-holder">
+        @*<input type="text" class="field" value="Your Email" title="Your Email" />*@
+
+        @Html.TextBoxFor(news => news.Email, new { @class = "field", @Value = "Your Email" })
+    </div>
+    <div class="field-holder">
+        @*<input type="text" class="field" value="Your Name" title="Your Name" />*@
+        @Html.TextBoxFor(news => news.Name, new { @Value = "Your Name" })
+    </div>
+    <div class="submit-button">
+        <input type="submit" value="Subscribe" />
+    </div>
+}
+
+
+
+
+
+
+
+

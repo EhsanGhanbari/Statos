@@ -1,0 +1,27 @@
+﻿@model Statos.Service.Categories.CategoryViewModel
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@section CategorySideBar
+    {
+    @Html.ActionLink("List of all Categories", "List", "Category")
+    @Html.ActionLink("Creat New Category", "Create", "Category")
+}
+
+
+@using (Html.BeginForm("Cerate", "Category"))
+{
+    <div>
+        @Html.LabelFor(category => category.Name)
+        @Html.TextBoxFor(category => category.Name)
+    </div>
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <div>
+        <input type="submit" value="Send" />
+    </div>
+}
+

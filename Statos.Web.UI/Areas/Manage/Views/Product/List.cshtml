@@ -1,0 +1,43 @@
+﻿@model  IEnumerable<Statos.Service.Products.ProductViewModel>
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@section ProductSideBar
+{
+    @Html.ActionLink("List of all Products", "List", "Product")
+    @Html.ActionLink("Create Product", "Create", "Product")
+}
+@foreach (var item in Model)
+{
+    <div>
+        @Html.LabelFor(product => item.Name)
+        @Html.DisplayFor(product => item.Name)
+    </div>
+    <div>
+        @Html.LabelFor(product => item.Category.Name)
+        @Html.DisplayFor(product => item.Category.Name)
+    </div>
+    <div>
+        @Html.LabelFor(product => item.Description)
+        @Html.DisplayFor(product => item.Description)
+    </div>
+    <div>
+        @Html.LabelFor(product => item.Brand.Name)
+        @Html.DisplayFor(product => item.Brand.Name)
+    </div>
+    <div>
+       <img width="200px" height="150px" src="@Url.Content(item.Picture)"/>
+    </div>
+    <div>
+        @Html.LabelFor(product => item.CreationTime)
+        @item.CreationTime.ToLongDateString();
+    </div>
+    <div>
+        @Html.ActionLink("more", "Detail", "Product", new { productId = item.ProductId }, null)
+        @Html.ActionLink("edit", "Edit", "Product", new { productId = item.ProductId }, null)
+    </div>
+    <br />
+    <br />
+}

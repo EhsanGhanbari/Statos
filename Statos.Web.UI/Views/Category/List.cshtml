@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Statos.Service.Categories.CategoryViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        @Html.ActionLink(item.Name, "Products", "Category", new { categoryId = item.CategoryId }, null)
+    </div>
+}
+

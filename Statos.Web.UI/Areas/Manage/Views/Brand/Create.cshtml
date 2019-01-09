@@ -1,0 +1,27 @@
+﻿@model Statos.Service.Products.BrandViewModel 
+@{
+    ViewBag.Title = "Add";
+    Layout = "../../Views/Shared/_ManageLayout.cshtml";
+}
+
+@section BrandSideBar
+    {
+    @Html.ActionLink("List of all brands", "List", "Brand")
+    @Html.ActionLink("Creat New Brand", "Create", "Brand")
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(brand => brand.Name)
+        @Html.TextBoxFor(brand => brand.Name)
+    </div>
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+}
+
+

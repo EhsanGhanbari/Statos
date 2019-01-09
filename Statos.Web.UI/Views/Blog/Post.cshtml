@@ -1,0 +1,19 @@
+﻿@model Statos.Service.Blogs.BlogViewModel 
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+
+<div>
+    @Html.DisplayTextFor(post => post.Title)
+</div>
+
+<div>
+    @Html.DisplayFor(post => post.Body)
+</div>
+
+<div>
+    <b>
+        @Model.CreationTime.ToLongDateString()
+    </b>
+</div>

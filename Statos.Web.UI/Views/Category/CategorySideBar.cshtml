@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Statos.Service.Categories.CategoryViewModel>
+<li>
+    <a title="Collections" href="#">Category</a>
+    <div class="dd">
+        <ul>
+            <li>
+                @foreach (var item in Model)
+                {
+                    @Html.ActionLink(item.Name, "Products", "Category", new { categoryId = item.CategoryId }, null);
+                }
+            </li>
+        </ul>
+    </div>
+</li>

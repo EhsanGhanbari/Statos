@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Untitled 1</title>
+    <link href="Content/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!--<link href="Content/css/bootstrap-rtl.css" type="text/css" rel="stylesheet">-->
+    <script src="Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.js" type="text/javascript"></script>
+    <!--<script src="Scripts/bootstrap-rtl.js" type="text/javascript"></script>-->
+
+    <script src="Scripts/carousel.js" type="text/javascript"></script>
+
+    <style>
+    html,body{height:100%;width:100%}
+        .imgChangeSize {
+            height: 400px!important;
+            width: 100%;
+        }
+
+        .con {
+            width: 90%;
+            margin-left: 4%;
+        }
+
+        .gradiandLine {
+            background: #ff3232; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxMyUiIHN0b3AtY29sb3I9IiNmZjMyMzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMSUiIHN0b3AtY29sb3I9IiNmMmUyMDciIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1NCUiIHN0b3AtY29sb3I9IiM2ZDExNmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiM0N2FhMTYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5MSUiIHN0b3AtY29sb3I9IiMxZjcwZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+            background: -moz-linear-gradient(left, #ff3232 13%, #f2e207 31%, #6d116d 54%, #47aa16 75%, #1f70f2 91%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(13%,#ff3232), color-stop(31%,#f2e207), color-stop(54%,#6d116d), color-stop(75%,#47aa16), color-stop(91%,#1f70f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left, #ff3232 13%,#f2e207 31%,#6d116d 54%,#47aa16 75%,#1f70f2 91%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left, #ff3232 13%,#f2e207 31%,#6d116d 54%,#47aa16 75%,#1f70f2 91%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(left, #ff3232 13%,#f2e207 31%,#6d116d 54%,#47aa16 75%,#1f70f2 91%); /* IE10+ */
+            background: linear-gradient(to right, #ff3232 13%,#f2e207 31%,#6d116d 54%,#47aa16 75%,#1f70f2 91%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#1f70f2',GradientType=1 ); /* IE6-8 */
+            width: 10px;
+            height: 93%;
+            position:fixed;
+            left:0;
+            top:6%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradiandLine"></div>
+    <div class="con">
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Import & Export Co</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search" class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search" class="form-control">
+                    </div>
+                    <button class="btn btn-default" type="submit">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <div class="carousel slide " id="carousel-example-generic"  style="margin-top:3%">
+            <ol class="carousel-indicators">
+                <li class="" data-slide-to="0" data-target="#carousel-example-generic"></li>
+                <li data-slide-to="1" data-target="#carousel-example-generic" class="active"></li>
+                <li data-slide-to="2" data-target="#carousel-example-generic" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="imgChangeSize" src="Content/img/bg1.jpg" alt="..." data-src="holder.js/900x500/auto/#555:#333/text:First slide">
+                    <div class="carousel-caption">
+                        <h3>titr1</h3>
+                        <p>matn</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="imgChangeSize" src="Content/img/bg2.jpg" alt="..." data-src="holder.js/900x500/auto/#555:#333/text:Second slide">
+                    <div class="carousel-caption">
+                        <h3>titr2</h3>
+                        <p>matn</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="imgChangeSize" src="Content/img/bg3.jpg" alt="..." data-src="holder.js/900x500/auto/#555:#333/text:Third slide">
+                    <div class="carousel-caption">
+                        <h3>titr3</h3>
+                        <p>matn</p>
+                    </div>
+                </div>
+            </div>
+            <a data-slide="prev" href="#carousel-example-generic" class="left carousel-control">
+                <span class="icon-prev"></span>
+            </a>
+            <a data-slide="next" href="#carousel-example-generic" class="right carousel-control">
+                <span class="icon-next"></span>
+            </a>
+        </div>
+
+        <div class="row">
+        <div class="col-md-4"></div>
+            <div class="col-md-3" style="margin-top: 2%;position:fixed">
+                <div class="well">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                        <li class=""><a data-toggle="tab" href="#profile">Profile</a></li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" href="#">Dropdown <b class="caret"></b></a>
+                            <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu">
+                                <li><a data-toggle="tab" tabindex="-1" href="#dropdown1">@fat</a></li>
+                                <li><a data-toggle="tab" tabindex="-1" href="#dropdown2">@mdo</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div id="home" class="tab-pane fade active in">
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                        </div>
+                        <div id="profile" class="tab-pane fade">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                        </div>
+                        <div id="dropdown1" class="tab-pane fade">
+                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                        </div>
+                        <div id="dropdown2" class="tab-pane fade">
+                            <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-6" style="margin-top: 2%">
+                    <div class="thumbnail">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADICAYAAABS39xVAAAEr0lEQVR4nO3bMVLjSABA0bn/UcicOXHmzKFzH0FXmIlU1RYtTNXAsl/zgpdAI8lQ+tUtWr+WZfkNUPDrpy8A4LMEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIEKyDeXt7e3K/36fj7vf707jT6bR7zPP5/DT2drv99XWeTqdPn3/7mR6Px3Tc9Xp9Gne5XH7878HXEqyDeDwe727s1fV6fRp7u912x26Puw3L3jG/4jq3Mfpo7DbEl8tlOu58Pv/434avI1gHMd6w600/zozGsWuExpt5NisZw7YGYpzF7M10Pnud6zHHMI3nH8euX1s/0zgjG39+Dek4g/yKGSH/D4J1ELMIzW748UYeZynr2DEEaxzGY45xWEMwhm0Mzhi3NSSz6xzPNZ5/Npsbz7UGczzP7HdiaXgcgnVgs2XR3gxpFoK9Z0GzEIxLx8fj8RS2j55PrbbB2pshzYI5i92yzCNMm2Ad0BilvZt4OxvZLv9my6zVbJY0BuZyuTwtR/ce/M9+dj3mbDm6LPPl396sbe+z0iVYB7R9AD1b+n11sGbn/exybBw/W2YKFivBOrBxprXe9N8ZrGV5vwXh1TXu/UdPsJgRrIPbznS+O1jj8V/NrsZYbZeugsWMYB3cNh7f9dB9Wd5vRv3o+dWrmZiH7swI1gGMN/c4G5rtb/qObQ2r2SbTWSy24/Y+1+wz2dbwbxOsg5gFYLZJcxz7auPo7BnY3gxt/PrtdpvuwdqOe7VUm218nc2mZsG2cfSYBOsgPnrd5rtfzdnbc7Xdm/XR8WbX4NUctgTrQGY3+H/x8vPenqvt/qpX7xHuRXP7fS8//7sEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgIw/XTnG3++63PQAAAAASUVORK5CYII=" alt="300x200" data-src="holder.js/300x200" style="width: 300px; height: 200px;">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-primary" href="#">Button</a> <a class="btn btn-default" href="#">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-top: 2%">
+                    <div class="thumbnail">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADICAYAAABS39xVAAAEr0lEQVR4nO3bMVLjSABA0bn/UcicOXHmzKFzH0FXmIlU1RYtTNXAsl/zgpdAI8lQ+tUtWr+WZfkNUPDrpy8A4LMEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIEKyDeXt7e3K/36fj7vf707jT6bR7zPP5/DT2drv99XWeTqdPn3/7mR6Px3Tc9Xp9Gne5XH7878HXEqyDeDwe727s1fV6fRp7u912x26Puw3L3jG/4jq3Mfpo7DbEl8tlOu58Pv/434avI1gHMd6w600/zozGsWuExpt5NisZw7YGYpzF7M10Pnud6zHHMI3nH8euX1s/0zgjG39+Dek4g/yKGSH/D4J1ELMIzW748UYeZynr2DEEaxzGY45xWEMwhm0Mzhi3NSSz6xzPNZ5/Npsbz7UGczzP7HdiaXgcgnVgs2XR3gxpFoK9Z0GzEIxLx8fj8RS2j55PrbbB2pshzYI5i92yzCNMm2Ad0BilvZt4OxvZLv9my6zVbJY0BuZyuTwtR/ce/M9+dj3mbDm6LPPl396sbe+z0iVYB7R9AD1b+n11sGbn/exybBw/W2YKFivBOrBxprXe9N8ZrGV5vwXh1TXu/UdPsJgRrIPbznS+O1jj8V/NrsZYbZeugsWMYB3cNh7f9dB9Wd5vRv3o+dWrmZiH7swI1gGMN/c4G5rtb/qObQ2r2SbTWSy24/Y+1+wz2dbwbxOsg5gFYLZJcxz7auPo7BnY3gxt/PrtdpvuwdqOe7VUm218nc2mZsG2cfSYBOsgPnrd5rtfzdnbc7Xdm/XR8WbX4NUctgTrQGY3+H/x8vPenqvt/qpX7xHuRXP7fS8//7sEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgIw/XTnG3++63PQAAAAASUVORK5CYII=" alt="300x200" data-src="holder.js/300x200" style="width: 300px; height: 200px;">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-primary" href="#">Button</a> <a class="btn btn-default" href="#">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-top: 2%">
+                    <div class="thumbnail">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADICAYAAABS39xVAAAEr0lEQVR4nO3bMVLjSABA0bn/UcicOXHmzKFzH0FXmIlU1RYtTNXAsl/zgpdAI8lQ+tUtWr+WZfkNUPDrpy8A4LMEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIEKyDeXt7e3K/36fj7vf707jT6bR7zPP5/DT2drv99XWeTqdPn3/7mR6Px3Tc9Xp9Gne5XH7878HXEqyDeDwe727s1fV6fRp7u912x26Puw3L3jG/4jq3Mfpo7DbEl8tlOu58Pv/434avI1gHMd6w600/zozGsWuExpt5NisZw7YGYpzF7M10Pnud6zHHMI3nH8euX1s/0zgjG39+Dek4g/yKGSH/D4J1ELMIzW748UYeZynr2DEEaxzGY45xWEMwhm0Mzhi3NSSz6xzPNZ5/Npsbz7UGczzP7HdiaXgcgnVgs2XR3gxpFoK9Z0GzEIxLx8fj8RS2j55PrbbB2pshzYI5i92yzCNMm2Ad0BilvZt4OxvZLv9my6zVbJY0BuZyuTwtR/ce/M9+dj3mbDm6LPPl396sbe+z0iVYB7R9AD1b+n11sGbn/exybBw/W2YKFivBOrBxprXe9N8ZrGV5vwXh1TXu/UdPsJgRrIPbznS+O1jj8V/NrsZYbZeugsWMYB3cNh7f9dB9Wd5vRv3o+dWrmZiH7swI1gGMN/c4G5rtb/qObQ2r2SbTWSy24/Y+1+wz2dbwbxOsg5gFYLZJcxz7auPo7BnY3gxt/PrtdpvuwdqOe7VUm218nc2mZsG2cfSYBOsgPnrd5rtfzdnbc7Xdm/XR8WbX4NUctgTrQGY3+H/x8vPenqvt/qpX7xHuRXP7fS8//7sEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgIw/XTnG3++63PQAAAAASUVORK5CYII=" alt="300x200" data-src="holder.js/300x200" style="width: 300px; height: 200px;">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-primary" href="#">Button</a> <a class="btn btn-default" href="#">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-top: 2%">
+                    <div class="thumbnail">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADICAYAAABS39xVAAAEr0lEQVR4nO3bMVLjSABA0bn/UcicOXHmzKFzH0FXmIlU1RYtTNXAsl/zgpdAI8lQ+tUtWr+WZfkNUPDrpy8A4LMEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIEKyDeXt7e3K/36fj7vf707jT6bR7zPP5/DT2drv99XWeTqdPn3/7mR6Px3Tc9Xp9Gne5XH7878HXEqyDeDwe727s1fV6fRp7u912x26Puw3L3jG/4jq3Mfpo7DbEl8tlOu58Pv/434avI1gHMd6w600/zozGsWuExpt5NisZw7YGYpzF7M10Pnud6zHHMI3nH8euX1s/0zgjG39+Dek4g/yKGSH/D4J1ELMIzW748UYeZynr2DEEaxzGY45xWEMwhm0Mzhi3NSSz6xzPNZ5/Npsbz7UGczzP7HdiaXgcgnVgs2XR3gxpFoK9Z0GzEIxLx8fj8RS2j55PrbbB2pshzYI5i92yzCNMm2Ad0BilvZt4OxvZLv9my6zVbJY0BuZyuTwtR/ce/M9+dj3mbDm6LPPl396sbe+z0iVYB7R9AD1b+n11sGbn/exybBw/W2YKFivBOrBxprXe9N8ZrGV5vwXh1TXu/UdPsJgRrIPbznS+O1jj8V/NrsZYbZeugsWMYB3cNh7f9dB9Wd5vRv3o+dWrmZiH7swI1gGMN/c4G5rtb/qObQ2r2SbTWSy24/Y+1+wz2dbwbxOsg5gFYLZJcxz7auPo7BnY3gxt/PrtdpvuwdqOe7VUm218nc2mZsG2cfSYBOsgPnrd5rtfzdnbc7Xdm/XR8WbX4NUctgTrQGY3+H/x8vPenqvt/qpX7xHuRXP7fS8//7sEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgIw/XTnG3++63PQAAAAASUVORK5CYII=" alt="300x200" data-src="holder.js/300x200" style="width: 300px; height: 200px;">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-primary" href="#">Button</a> <a class="btn btn-default" href="#">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<ul class="nav nav-pills nav-stacked text-center">
+		<li class="active">
+			<a href="#">
+				این سایت متعلق به صاحبش است
+			</a>
+		</li>
+	</ul>
+
+</body>
+
+</html>

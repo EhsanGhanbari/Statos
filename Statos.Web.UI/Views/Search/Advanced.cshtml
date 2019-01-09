@@ -1,0 +1,23 @@
+﻿@model Statos.Web.UI.ViewModels.SearchViewModel 
+@{
+    ViewBag.Title = "Advanced";
+}
+
+@Html.BeginForm()
+{
+<div>
+    @Html.DisplayFor(search => search.ProductName)
+    @Html.TextBoxFor(search => search.ProductName)
+</div>
+<div>
+    @Html.DisplayFor(search => search.Category)
+    @Html.TextBoxFor(search => search.Category)
+</div>
+<div>
+    @Html.DisplayFor(search => search.Brand)
+    @Html.TextBoxFor(search => search.Brand)
+</div>
+<div>
+    <input type="submit" value="Value" />
+</div>
+}

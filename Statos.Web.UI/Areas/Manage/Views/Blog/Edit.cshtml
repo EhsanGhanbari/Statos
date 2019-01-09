@@ -1,0 +1,25 @@
+﻿@model Statos.Service.Blogs.BlogViewModel 
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section BlogSideBar
+    {
+    @Html.ActionLink("List of all Blogs", "List", "Blog")
+    @Html.ActionLink("Creat New Blog", "Create", "Blog")
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(post => post.Title)
+        @Html.EditorFor(post => post.Title)
+    </div>    
+    <div>
+        @Html.LabelFor(post => post.Body)
+        @Html.EditorFor(post => post.Body)
+    </div>
+    <div>
+        <input type="submit" value="Edit" />
+    </div>
+}

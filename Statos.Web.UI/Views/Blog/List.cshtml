@@ -1,0 +1,35 @@
+﻿@*http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
+https://github.com/TroyGoode/PagedList*@
+
+
+@using PagedList
+@using PagedList.Mvc;
+@model IEnumerable<Statos.Service.Blogs.BlogViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        @Html.ActionLink(item.Title, "Post", "Blog", new { postId = item.PostId, urlSlug = item.UrlSlug }, null)
+    </div>
+    <div>
+        @Html.DisplayTextFor(blog => item.ShortBody)
+        <b>@Html.ActionLink("Read More", "Post", "Blog", new
+              {
+                  postId = item.PostId,
+                  urlSlug = item.UrlSlug
+              }, null)</b>
+    </div>
+    <div>
+        <b>
+            @item.CreationTime.ToLongDateString()
+        </b>
+    </div>
+}
+
+<br />
+
+@Html.PagedListPager((IPagedList)ViewBag.OnePageOfPosts, page => Url.Action("List", new { page }) )

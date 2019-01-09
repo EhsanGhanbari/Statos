@@ -1,0 +1,20 @@
+﻿@model Statos.Service.Contents.ContentViewModel
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_ContentLayout.cshtml";
+}
+<div>
+    @Html.DisplayTextFor(about => about.AboutText)
+</div>
+<div>
+    @Html.LabelFor(about => about.Mobile)
+    @Html.DisplayFor(about => about.Mobile)
+</div>
+<div>
+    @Html.LabelFor(about => about.Phone)
+    @Html.DisplayFor(about => about.Phone)
+</div>
+<div>
+    @Html.LabelFor(about => about.Address)
+    @Html.DisplayFor(about => about.Address)
+</div>

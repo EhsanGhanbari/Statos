@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Statos.Service.Stores.StoreViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+@section StoreSideBar
+{
+    @Html.ActionLink("store Content", "List", "Store")
+    @Html.ActionLink("Add to Content", "Add", "Store")
+}
+<div>
+    @Html.ActionLink("Add more to Store", "Add", "Store")
+</div>
+@foreach (var item in Model)
+{
+    <div>
+        @Html.LabelFor(store => item.ProductName)
+        @Html.DisplayFor(store => item.ProductName)
+    </div>
+    <div>
+        @Html.LabelFor(store => item.NumberOfProduct)
+        @Html.DisplayFor(store => item.NumberOfProduct)
+    </div>
+    <div>
+        @Html.LabelFor(store => item.Price)
+        @Html.DisplayFor(store => item.Price)
+    </div>
+    <div>
+        @Html.LabelFor(store => item.DateOfPurchase)
+        @Html.DisplayFor(store => item.DateOfPurchase)
+    </div>
+    <div>
+        @Html.LabelFor(store => item.PurchaserName)
+        @Html.DisplayFor(store => item.PurchaserName)
+    </div>
+    <div>
+        @Html.LabelFor(store => item.VendorName)
+        @Html.DisplayFor(store => item.VendorName)
+    </div>
+    <div>
+        @Html.LabelFor(store => item.VendorCountry)
+        @Html.DisplayFor(store => item.VendorCountry)
+    </div>          
+    <div>
+        @Html.LabelFor(store => item.TotalPrice)
+        @Html.DisplayFor(store => item.TotalPrice)
+    </div> 
+    
+    <div>
+        @Html.ActionLink("Edit", "Edit", "Store", new { id = item.StoreId }, null)
+    </div>
+    <div>
+        @Html.ActionLink("Delete", "Delete", "Store", new { id = item.StoreId }, null)
+    </div>
+}

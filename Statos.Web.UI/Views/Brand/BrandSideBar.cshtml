@@ -1,0 +1,6 @@
+﻿@model IEnumerable<Statos.Service.Products.BrandViewModel>
+@foreach (var item in Model)
+{
+    @Html.ActionLink(item.Name, "Products", "Brand", new { brandId = item.BrandId }, null);
+}
+

@@ -1,0 +1,28 @@
+﻿@model Statos.Service.Categories.CategoryViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@section CategorySideBar
+    {
+    @Html.ActionLink("List of all Categories", "List", "Category")
+    @Html.ActionLink("Creat New Category", "Create", "Category")
+}
+
+
+<div>
+    @using (Html.BeginForm("Edit", "Category"))
+    {
+        @Html.HiddenFor(category => category.CategoryId)
+        @Html.HiddenFor(category => category.CreationTime)
+        <div>
+            @Html.LabelFor(category => category.Name)
+            @Html.EditorFor(category => category.Name)
+        </div>
+        <div>
+            <input type="submit" value="Edit" />
+        </div>
+    }
+</div>
+

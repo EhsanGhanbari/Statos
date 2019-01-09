@@ -1,0 +1,33 @@
+﻿@model Statos.Service.Products.ProductViewModel 
+@{
+    ViewBag.Title = "Details";
+    Layout = "../Shared/_MainLayout.cshtml";
+}
+
+<p>
+    <img src= "@Url.Content(Model.Picture)" alt="IMAGES" />
+</p>
+<p>
+    @Html.DisplayFor(product => product.Picture)
+</p>
+<p>
+    @Html.LabelFor(product => product.Name)
+    @Html.DisplayFor(product => product.Name)
+</p>
+<p>
+    @Html.LabelFor(product => product.Brand.Name)
+    @Html.DisplayFor(product => product.Brand.Name)
+</p>
+<p>
+    @Html.LabelFor(product => product.Category.Name)
+    @Html.DisplayFor(product => product.Category.Name)
+</p>
+<p>
+    @Html.LabelFor(product => product.Price)
+    @Html.DisplayFor(product => product.Price)
+</p>
+<p>
+    @Html.DisplayFor(product => product.Description)
+</p>
+
+

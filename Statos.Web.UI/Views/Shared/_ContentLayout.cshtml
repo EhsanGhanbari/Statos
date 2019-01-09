@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../Content/CSS/Main/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../Content/CSS/Main/carousel.css" rel="stylesheet" type="text/css">
+
+
+    <style type="text/css" id="holderjs-style">
+        .holderjs-fluid {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .fontLeft {
+            text-align: left;
+        }
+    </style>
+</head>
+<!-- NAVBAR
+================================================== -->
+<body style="background-image: url('../../Content/Images/Main/bg.png'); background-repeat: repeat">
+    <div class="navbar-wrapper">
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Products", "List", "Product")</li>
+                        <li>@Html.ActionLink("Blog", "List", "Blog")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brows Product by<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    @Html.ActionLink("Category", "List", "Category")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Brand", "List", "Brand")
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Russian</a></li>
+                                <li><a href="#">Persian</a></li>
+                            </ul>
+                        </li>
+                        @{
+                            Html.RenderAction("SearchSideBar", "Search");
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Carousel
+            ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+            <li class="" data-target="#myCarousel" data-slide-to="1"></li>
+            <li class="active" data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item">
+                <img style="height: 500px; width: 100%; display: block;" src="../../Content/Images/Main/b1.png" data-src="content/holder.js/100%x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam                       
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img style="height: 500px; width: 100%; display: block;" src="../../Content/Images/Main/b1.png" data-src="content/holder.js/100%x500/auto/#777:#7a7a7a/text:Second slide" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p>
+                            Epsum factorial non deposit quid pro quo hic escorol. Olypian                       
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item active">
+                <img style="height: 500px; width: 100%; display: block;" src="../../Content/Images/Main/b1.png" data-src="content/holder.js/100%x500/auto/#777:#7a7a7a/text:Third slide" alt="Third slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>One more for good measure.</h1>
+                        <p>
+                            Li Europan lingues es membres del sam familie. Lor separat
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    <!-- /.carousel -->
+
+    @RenderBody()
+
+    
+    <!-- Marketing messaging and featurettes
+            ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row alert alert-radman" style="padding: 10px;">
+            <div class="col-lg-4">
+                <img style="width: 140px; height: 140px;" class="img-circle" src="../../Content/Images/Main/index.png" data-src="holder.js/140x140" alt="140x140">
+                <h2>About</h2>
+                <p class="fontLeft">
+                    @{
+                        Html.RenderAction("AboutSideBar", "Home");
+                    }
+                </p>
+                <p><a class="btn btn-primary" href="#">View details »</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img style="width: 140px; height: 140px;" class="img-circle" src="../../Content/Images/Main/index.png" data-src="holder.js/140x140" alt="140x140">
+                <h2>Latest Posts</h2>
+                <p class="fontLeft">
+                    @{
+                        Html.RenderAction("PostSideBar", "Blog");
+                    }
+                </p>
+                <p><a class="btn btn-warning" href="#">View details »</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img style="width: 140px; height: 140px;" class="img-circle" src="../../Content/Images/Main/index.png" data-src="holder.js/140x140" alt="140x140">
+                <h2>NewsLetter</h2>
+                <p class="fontLeft">
+                    @{
+                        Html.RenderAction("MemberSideBar", "Home");
+                    }
+                </p>
+                <p><a class="btn btn-info" href="#">View details »</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+
+    </div>
+    <!-- /.container -->
+    <hr />
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted credit">© Statos @DateTime.Now.Year ,@Html.ActionLink("Develoeprs", "Developers", "Home")</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+            ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../Scripts/Main/jquery.js"></script>
+    <script src="../../Scripts/Main/bootstrap.js"></script>
+    <script src="../../Scripts/Main/holder.js"></script>
+</body>
+</html>

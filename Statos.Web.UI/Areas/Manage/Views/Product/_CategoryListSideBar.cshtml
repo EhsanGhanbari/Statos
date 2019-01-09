@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Statos.Service.Categories.CategoryViewModel>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    @Html.ActionLink(item.Name, "ByBrand", "Product", new { brandId = item.CategoryId }, null)
+}
+

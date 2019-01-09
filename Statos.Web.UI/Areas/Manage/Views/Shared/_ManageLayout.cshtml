@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Statos</title>
+
+    <!-- CSS -->
+    <link href="../../../../Content/CSS/Manage/transdmin.css" rel="stylesheet" />
+
+    <!-- JavaScripts-->
+    <script src="../../../../Scripts/Manage/jquery.js"></script>
+    <script src="../../../../Scripts/Manage/jquery_.js"></script>
+    <script src="../../../../Content/ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1><a href="#"><span>Transdmin Light</span></a></h1>
+
+        <!-- You can name the links with lowercase, they will be transformed to uppercase by CSS, we prefered to name them with uppercase to have the same effect with disabled stylesheet -->
+        <ul id="mainNav">
+            <li>@Html.ActionLink("Account", "List", "Account")</li>
+            <li>@Html.ActionLink("Product", "List", "Product")</li>
+            <li>@Html.ActionLink("Contacts", "List", "Contact")</li>
+            <li>@Html.ActionLink("Blog", "List", "Blog")</li>
+            <li>@Html.ActionLink("Store", "List", "Store")</li>
+            <li>@Html.ActionLink("Category", "List", "Category")</li>
+            <li>@Html.ActionLink("Brand", "List", "Brand")</li>
+            <li class="logout">LogOut</li>
+        </ul>
+        <div id="containerHolder">
+            <div id="container">
+                <div id="sidebar">
+                    <ul class="sideNav">
+                        <ul class="sideNav">
+                            <li>
+                                @if (IsSectionDefined("AccountSideBar"))
+                                {
+                                    @RenderSection("AccountSideBar")
+                                }
+                                @if (IsSectionDefined("BlogSideBar"))
+                                {
+                                    @RenderSection("BlogSideBar")
+                                }
+                                @if (IsSectionDefined("BrandSideBar"))
+                                {
+                                    @RenderSection("BrandSideBar")
+                                }
+                                @if (IsSectionDefined("CategorySideBar"))
+                                {
+                                    @RenderSection("CategorySideBar")
+                                }
+                                @if (IsSectionDefined("ContactSideBar"))
+                                {
+                                    @RenderSection("ContactSideBar")
+                                }
+                                @if (IsSectionDefined("ContentSideBar"))
+                                {
+                                    @RenderSection("ContentSideBar")
+                                }
+                                @if (IsSectionDefined("ProductSideBar"))
+                                {
+                                    @RenderSection("ProductSideBar")
+                                }
+                                @if (IsSectionDefined("StoreSideBar"))
+                                {
+                                    @RenderSection("StoreSideBar")
+                                }
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div id="main">
+                    @RenderBody()
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <p id="footer">
+        </p>
+    </div>
+</body>
+</html>
+
+
